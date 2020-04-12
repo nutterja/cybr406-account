@@ -12,8 +12,8 @@ public class ProfileEventHandler {
 
 
     @HandleBeforeSave
-    //
     // @PreAuthorize("hasRole('ROLE_ADMIN') or #account.username == authentication.principal.username")
+    @PreAuthorize("hasRole('ROLE_ADMIN') or #profile.username == authentication.principal.username")
     public void beforeSave(Profile profile) {
     }
 
